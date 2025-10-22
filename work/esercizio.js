@@ -64,3 +64,5 @@
 //  alert("in maiuscolo:" + maiuscola);
 
 // cerca di usare const invece di let
+
+//6) fai un ciclo for che stampi il quadrato dei numeri da 1 a 100

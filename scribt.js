@@ -176,6 +176,13 @@ true !== false; //ture
 // let firstName = "selma";
 // let hello = "ciao" + " " + firstName;
 
+// let topolino = 5;
+// topolino = topolino + 10;
+
+// topolino += 10; // è la stessa cosa di quello sopra
+
+// topolino++ //aumento di uno con il ++, è un anotazione particolare che vale per l'1 
+
 //DIFFERENZA TRA LET E VAR;
 // let pippo = 5;
 // let pluto = pippo + 30; javascribt segnala un errore perheè usa una variabile 
@@ -260,6 +267,10 @@ true !== false; //ture
 // // console.log(second);
  
 // alert("la somma è: " + sum); 
+
+//CICLI SERVONO A RIPETERE UN CERTO NUMERO DI VOLTE UN CODICE
+
+
 
 
 
