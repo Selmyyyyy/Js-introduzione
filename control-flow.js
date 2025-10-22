@@ -85,20 +85,20 @@
 //     break;
 // }
 
-const response = prompt('come ti senti oggi?')
+// const response = prompt('come ti senti oggi?')
 
-if(response === "felice"){
-alert("bene sono felice di sentirlo")
-} else if (response === "triste") {
-  alert("su con il morale, oggi è una splendida giornata")  
-} else if (response === "euforico") {
+// if(response === "felice"){
+// alert("bene sono felice di sentirlo")
+// } else if (response === "triste") {
+//   alert("su con il morale, oggi è una splendida giornata")  
+// } else if (response === "euforico") {
 
-    alert("bene, ma datti una calmata!") 
-} else if (response === "arrabbiato") {
-    alert("mi dispiace, cosa è successo?")
-} else{
-alert("è molto interessante")
- }
+//     alert("bene, ma datti una calmata!") 
+// } else if (response === "arrabbiato") {
+//     alert("mi dispiace, cosa è successo?")
+// } else{
+// alert("è molto interessante")
+//  }
 
 
 
