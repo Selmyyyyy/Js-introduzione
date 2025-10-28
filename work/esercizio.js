@@ -403,3 +403,76 @@
 
 
 
+
+//23) È possibile ottenere l'ennesimo carattere, o lettera, da una stringa scrivendo [N] dopo la stringa (ad esempio, string[2]). Il valore risultante sarà una stringa contenente un solo carattere (ad esempio, "b"). Il primo carattere ha posizione 0, il che fa sì che l'ultimo si trovi alla posizione string.length - 1. In altre parole, una stringa di due caratteri ha lunghezza 2 e i suoi caratteri hanno posizioni 0 e 1.
+//Scrivi una funzione chiamata countBs che accetti una stringa come unico argomento e restituisca un numero che indica quanti caratteri B maiuscoli sono presenti nella stringa.
+//Successivamente, scrivi una funzione chiamata countChar che si comporti come countBs, tranne per il fatto che accetta un secondo argomento che indica il carattere da contare (invece di contare solo i caratteri B maiuscoli). Riscrivi countBs per utilizzare questa nuova funzione.
+
+// function countChar(string, char) {
+//   let count = 0;
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] === char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+
+// function countBs(string) {
+
+//   return countChar(string, "B");
+// }
+
+
+
+// console.log(countBs('Barbara Bimbo Babbo Bicchiere'));
+
+// console.log(countChar('Banana a'));
+
+
+
+//24) Inversione di un numero
+//Scrivi una funzione invertiNumero che prenda un numero come parametro e restituisca il numero con le cifre invertite (es. 123 → 321).
+
+// function InvertedNumber(n) {
+//    const StringNumber = String(n);
+
+//    const number = StringNumber.split('');
+
+//    const Inverted = number.reverse();
+
+//    const StringInverted = Inverted.join('');
+
+//    const numberInverted = parseInt(StringInverted, 10);
+
+//    return numberInverted;
+// }
+
+// console.log(InvertedNumber(123));  
+// console.log(InvertedNumber(98765));
+// console.log(InvertedNumber(500));  
+// console.log(InvertedNumber(1002)); 
+
+//25) Tabellina
+//Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console la tabellina di quel numero fino a 10.
+
+//26) Fibonacci
+//Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca l’N-esimo numero della sequenza di Fibonacci.
+
+//27)  Conteggio vocali
+//Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il numero di vocali presenti.
+
+//28) Sconto
+//Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e percentuale di sconto) e restituisca il prezzo scontato.
+
+//29) Conversione gradi
+//Scrivi una funzione convertiGradi che prenda un numero come parametro (gradi Celsius) e restituisca la conversione in Fahrenheit
+
+//30) Verifica password
+//Scrivi una funzione verificaPassword che prenda una stringa e restituisca true se:
+// - Ha almeno 8 caratteri
+// - Contiene almeno una lettera maiuscola
+// - Contiene almeno un carattere speciale tra questi '!#@$%'
+// - Non contiene la parola 'cacca'
+
