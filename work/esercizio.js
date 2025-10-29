@@ -409,7 +409,7 @@
 //Successivamente, scrivi una funzione chiamata countChar che si comporti come countBs, tranne per il fatto che accetta un secondo argomento che indica il carattere da contare (invece di contare solo i caratteri B maiuscoli). Riscrivi countBs per utilizzare questa nuova funzione.
 
 // function countChar(string, char) {
-//   let count = 0;
+//   let count = 0; //variabile 
 //   for (let i = 0; i < string.length; i++) {
 //     if (string[i] === char) {
 //       count++;
@@ -426,9 +426,41 @@
 
 
 
-// console.log(countBs('Barbara Bimbo Babbo Bicchiere'));
+// console.log(countBs('Bicchiere'));
+// console.log(countBs('Limbo'));
 
-// console.log(countChar('Banana a'));
+
+// console.log(countChar('Banana', 'a'));
+
+//LA FUNZIONE SOTTO è LA CORREZIONE DEL PROF DEL ES SOPRA
+
+
+// function countBs(str) {
+//   let counter = 0; //variabile 
+
+//   for (let i = 0; i < str.length; i++) {
+
+// const selectedChar = str[i];
+// const lowerChar = selectedChar.toLowerCase();
+
+
+//     if (lowerChar === 'b') {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// }
+
+// function countChar(str) {
+//     return countBs(str, 'b');
+// }
+
+// console.log(countBs('Bicchiere'));
+// console.log(countBs('Limbo'));
+// console.log(countBs('abBracadabra'));
+// console.log(countChar('Banana', 'a'));
+// console.log(countChar('Bubble', 'b'));
+
 
 
 
@@ -456,18 +488,133 @@
 
 //25) Tabellina
 //Scrivi una funzione tabellina che prenda un numero come parametro e stampi in console la tabellina di quel numero fino a 10.
+// CORREZIONE DEL PROF MA FATTA IN MODO PIU SEMPLICE
+// function tabellina(nbr) {
+//     console.log(nbr * 1);
+//     console.log(nbr * 2);
+//     console.log(nbr * 3);
+//     console.log(nbr * 4);
+//     console.log(nbr * 5);
+//     console.log(nbr * 6);
+//     console.log(nbr * 7);
+//     console.log(nbr * 8);
+//     console.log(nbr * 9);
+//     console.log(nbr * 10);
+//     console.log(nbr * 11);
+    
+// }
+
+// tabellina(5);
+// tabellina(8);
+
+// QUESTA è LA CORREZIONE DEL PROF PIU PRECISA 
+// function tabellinaEvolution(nbr) {
+//     for (let i = 1; i < 11; i++) {
+//         console.log(nbr * i);
+//     }
+    
+// }
+
+// tabellinaEvolution(7);
+// tabellinaEvolution(9);
+
+// QUESTA INVECE TI METTE LA TABELLINA SU UNA STRINGA 
+
+// function tabellinaString(nbr) {
+ 
+//     let tabellinaStr = '';
+
+//     for (let i = 0; i < 11; i++) {
+//         const result = nbr * i;
+//         tabellinaStr += result;
+//         tabellinaStr += ' ';
+        
+//     }
+//     return tabellinaStr;
+// }
+
+// for (let i = 0; i < 11; i++) {
+//     console.log(tabellinaString(i));
+    
+    
+// }
 
 //26) Fibonacci
 //Scrivi una funzione fibonacci che prenda un numero N come parametro e restituisca l’N-esimo numero della sequenza di Fibonacci.
 
+// function fibonacci(nbr) {
+//    const  nbrToString = String(nbr);
+  
+//    let reversed = '';
+
+//    for (let i = nbrToString.length - 1; i >= 0; i--) {
+//   const char = nbrToString[i];
+//   reversed += char;
+//    }
+//    const reversedToNumber = Number(reversed);
+//    return reversedToNumber;
+// }
+
+// console.log(fibonacci(12345));
+// console.log(fibonacci(33456));
+
+
+
+
 //27)  Conteggio vocali
 //Scrivi una funzione contaVocali che prenda una stringa come parametro e restituisca il numero di vocali presenti.
+
+// function contaVocali(str) {
+    
+//     let counter = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+       
+//         const lowerChar = str[i].toLowerCase();
+
+//         if (lowerChar === 'a'
+//            || lowerChar === 'i'
+//            || lowerChar === 'e'
+//            || lowerChar === 'o'
+//            || lowerChar === 'u'
+//         ) {
+//             counter++;
+//         }
+        
+//     }
+//     return counter;
+// }
+
+// console.log(contaVocali('aiuola'));
+
 
 //28) Sconto
 //Scrivi una funzione applicaSconto che prenda due numeri come parametri (prezzo e percentuale di sconto) e restituisca il prezzo scontato.
 
+// function ApplyDiscount(n1, n2) {
+//     const discount = (n1 * n2) / 100;
+//     const priceDiscount = n2 - discount;
+//     return priceDiscount;
+// }
+
+// console.log(ApplyDiscount(100, 20));
+// console.log(ApplyDiscount(250, 15));
+// console.log(ApplyDiscount(80, 5));
+// console.log(ApplyDiscount(50, 10));
+
+
+
 //29) Conversione gradi
 //Scrivi una funzione convertiGradi che prenda un numero come parametro (gradi Celsius) e restituisca la conversione in Fahrenheit
+
+// function convertedDegrees(c) {
+//     const f = (c * 9/5) + 32;
+//     return f;
+// }
+
+// console.log(convertedDegrees(30));
+
+
 
 //30) Verifica password
 //Scrivi una funzione verificaPassword che prenda una stringa e restituisca true se:
@@ -476,3 +623,114 @@
 // - Contiene almeno un carattere speciale tra questi '!#@$%'
 // - Non contiene la parola 'cacca'
 
+//LA FUNZIONE SOTTO è QUELLA MENO ORDINATA, MA QUELLA CHE HO CAPITO
+// function checkPassword(password) {
+//    if (password.length < 8) {
+    
+//    } else {
+//     if (password.toLowerCase() === password) {
+//         return false;
+//     }else{
+//         if (password.includes("!")
+//         || password.includes("#")
+//         || password.includes("$")
+//         || password.includes("@")
+//         || password.includes("%")
+//         ) {
+//             if (password.includes("cacca")) {
+//                 return false;
+//             }
+           
+//          }else {
+//             return false;
+
+//          }
+//     }
+
+//    }
+// }
+
+// console.log(checkPassword('vinofresco'));
+// console.log(checkPassword('Cicciobello!'));
+
+
+// QUESTI SOTTO SONO TUTTI GLI ESEMPI DEL PROF
+function hasSpecialCharacters(str){
+    if (password.includes("!")
+        || password.includes('#')
+        || password.includes('@')
+        || password.includes('$')
+        || password.includes('%')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function containsUppercaseChar(str){
+    if (str.toLowerCase() === str) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function isTooShort(str){
+    if(str.length < 8){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function containsCacca(str){
+    if(str.includes('cacca')){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function checkPassword(password) {
+    // if(password.length < 8){
+    //     return false;
+    // } else {
+    //     if(password.toLowerCase() === password){
+    //         return false;
+    //     } else {
+    //         if (password.includes("!")
+    //         || password.includes('#')
+    //         || password.includes('@')
+    //         || password.includes('$')
+    //         || password.includes('%')) {
+    //             if (password.includes('cacca')) {
+    //                 return false;
+    //             } else {
+    //                 return true;
+    //             }
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    // }
+
+    
+    if (isTooShort(password)) {
+        return false;
+    } else if (!containsUppercaseChar(password)){
+        return false;
+    } else if (!hasSpecialCharacters(password)){
+        return false;
+    } else if (containsCacca(password)) {
+        return false;
+    } else {
+        return true;
+    }
+
+ 
+
+}
+
+
+console.log(checkPassword('caccacaccacacca'));
+console.log(checkPassword('Leonardo!'));
