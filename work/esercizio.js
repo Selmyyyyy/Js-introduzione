@@ -655,82 +655,413 @@
 
 
 // QUESTI SOTTO SONO TUTTI GLI ESEMPI DEL PROF
-function hasSpecialCharacters(str){
-    if (password.includes("!")
-        || password.includes('#')
-        || password.includes('@')
-        || password.includes('$')
-        || password.includes('%')) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function hasSpecialCharacters(str){
+//     if (password.includes("!")
+//         || password.includes('#')
+//         || password.includes('@')
+//         || password.includes('$')
+//         || password.includes('%')) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function containsUppercaseChar(str){
-    if (str.toLowerCase() === str) {
-        return false;
-    } else {
-        return true;
-    }
-}
+// function containsUppercaseChar(str){
+//     if (str.toLowerCase() === str) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
 
-function isTooShort(str){
-    if(str.length < 8){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function isTooShort(str){
+//     if(str.length < 8){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function containsCacca(str){
-    if(str.includes('cacca')){
-        return true;
-    } else {
-        return false;
-    }
-}
+// function containsCacca(str){
+//     if(str.includes('cacca')){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-function checkPassword(password) {
-    // if(password.length < 8){
-    //     return false;
-    // } else {
-    //     if(password.toLowerCase() === password){
-    //         return false;
-    //     } else {
-    //         if (password.includes("!")
-    //         || password.includes('#')
-    //         || password.includes('@')
-    //         || password.includes('$')
-    //         || password.includes('%')) {
-    //             if (password.includes('cacca')) {
-    //                 return false;
-    //             } else {
-    //                 return true;
-    //             }
-    //         } else {
-    //             return false;
-    //         }
-    //     }
-    // }
+// function checkPassword(password) {
+//     // if(password.length < 8){
+//     //     return false;
+//     // } else {
+//     //     if(password.toLowerCase() === password){
+//     //         return false;
+//     //     } else {
+//     //         if (password.includes("!")
+//     //         || password.includes('#')
+//     //         || password.includes('@')
+//     //         || password.includes('$')
+//     //         || password.includes('%')) {
+//     //             if (password.includes('cacca')) {
+//     //                 return false;
+//     //             } else {
+//     //                 return true;
+//     //             }
+//     //         } else {
+//     //             return false;
+//     //         }
+//     //     }
+//     // }
 
     
-    if (isTooShort(password)) {
-        return false;
-    } else if (!containsUppercaseChar(password)){
-        return false;
-    } else if (!hasSpecialCharacters(password)){
-        return false;
-    } else if (containsCacca(password)) {
-        return false;
-    } else {
-        return true;
-    }
+//     if (isTooShort(password)) {
+//         return false;
+//     } else if (!containsUppercaseChar(password)){
+//         return false;
+//     } else if (!hasSpecialCharacters(password)){
+//         return false;
+//     } else if (containsCacca(password)) {
+//         return false;
+//     } else {
+//         return true;
+//     }
 
  
 
+// }
+
+
+// console.log(checkPassword('caccacaccacacca'));
+// console.log(checkPassword('Leonardo!'));
+
+// 31) Somma dei numeri fino a n
+// Scrivi una funzione sommaFinoAN(n) che restituisce la somma dei numeri da 1 a n.
+// sommaFinoAN(5) -> 1 + 2 + 3 + 4 + 5 -> 15
+// function sommaFinoAN(n) {
+//   let somma = 0;
+//   for (let i = 1; i <= n; i++) {
+//     somma += i;
+//   }
+//   return somma;
+// }
+
+
+// console.log(sommaFinoAN(5)); // 15
+
+
+
+
+
+
+// 32) Conteggio cifre
+// Scrivi una funzione contaCifre(num) che restituisce il numero di cifre di un numero
+// contaCifre(5) -> 1
+// contaCifre(1245) -> 4
+// function contaCifre(num) {
+//   return num.toString().length;
+// }
+
+// // Esempi:
+// console.log(contaCifre(5));    // 1
+// console.log(contaCifre(1245)); // 4
+
+// 33) Somma delle cifre
+// Scrivi una funzione sommaCifre(num) che restituisce la somma delle cifre di un numero
+// sommaCifre(5) -> 5
+// sommaCifre(1245) -> 12
+// CORREZIONE DEL PROF
+// function sommaCifre(nbr) {
+    
+//     let nbrToString = String(nbr);
+//     let sum = 0;
+
+//     for (let i = 0; i < nbrToString.length; i++) {
+       
+//         const nChar = nbrToString[i];
+
+//         const n = Number(nChar);
+//         sum = sum + n;
+
+        
+//     }
+// return sum;
+    
+// }
+
+// console.log(sommaCifre(10));
+// console.log(sommaCifre(444));
+
+
+
+
+// function sommaCifre(num) {
+//   let somma = 0;
+//   let cifre = num.toString();
+//   for (let cifra of cifre) {
+//     somma += Number(cifra);
+//   }
+//   return somma;
+// }
+
+// // Esempi:
+// console.log(sommaCifre(5));    // 5
+// console.log(sommaCifre(1245)); // 12
+
+
+
+
+
+// 34) Conversione valuta
+// Scrivi una funzione euroToDollaro(euro) che converte un importo in euro in dollari (1 euro = 1.1 dollari).
+
+// function euroToDollaro(euro) {
+//   return euro * 1.1;
+// }
+
+// console.log(euroToDollaro(10)); // 11
+
+//correzione del prof
+// function euroDollari(euro) {
+//     const dollari = euro * 1.1;
+//     return dollari;
+    
+// }
+
+
+
+// 35) Calcolo area rettangolo
+// Scrivi una funzione areaRettangolo(base, altezza) che restituisce l’area di un rettangolo.
+
+// function areaRettangolo(base, altezza) {
+//    const area = base * altezza;
+//    return area; 
+// }
+
+// console.log(areaRettangolo(20,6));
+
+
+
+// function areaRettangolo(base, altezza) {
+//   return base * altezza;
+// }
+
+// // Esempio:
+// console.log(areaRettangolo(5, 10)); // 50
+
+
+// 36) Calcolo media
+// Scrivi una funzione media(a, b, c) che restituisce la media di tre numeri.
+// correzione del prof
+// function media(a,b,c) {
+//     const sum = a + b + c;
+//     const mean = sum / 3;
+//     return mean;
+    
+// }
+
+// console.log(media(2,44,5));
+
+
+
+// function media(a, b, c) {
+//   return (a + b + c) / 3;
+// }
+
+// // Esempio:
+// console.log(media(3, 6, 9)); // 6
+
+
+// 37) Generatore di password casuale
+// Scrivi una funzione generaPasswordCasuale() che restituisce una password di 8 caratteri usando solo lettere maiuscole e numeri (usa Math.random())
+//correzione del prof
+// function generaPasswordCasuale() {
+//     const availableCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+//       let password = "";
+
+//     for (let i = 0; i < 8; i++) {
+//         const numeroRandomico = Math.random();
+//         const position = numeroRandomico * (availableCharacters.length - 1);
+//         const roundedPosition = Math.round(position);
+      
+// password = password + availableCharacters[roundedPosition];
+
+        
+//     }
+//     return password;
+// }
+
+// console.log(generaPasswordCasuale());
+
+
+// function generaPasswordCasuale() {
+//   const caratteri = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//   let password = "";
+//   for (let i = 0; i < 8; i++) {
+//     let indiceCasuale = Math.floor(Math.random() * caratteri.length);
+//     password += caratteri[indiceCasuale];
+//   }
+//   return password;
+// }
+
+
+// console.log(generaPasswordCasuale()); 
+
+
+
+
+// 38) Potenza con ciclo
+// Scrivi una funzione potenzaCiclo(base, esponente) che calcola la potenza usando un ciclo.
+//correzione del prof\
+// function potenzaCiclo(base, esponente) 
+// {
+//     let pow = 1;
+//     for (let i = 0; i < esponente; i++) {
+//         pow = pow * base;
+        
+//     }
+//    return pow; 
+// }
+
+// console.log(potenzaCiclo(2,3));
+
+
+
+
+// function potenzaCiclo(base, esponente) {
+//   let risultato = 1;
+//   for (let i = 0; i < esponente; i++) {
+//     risultato *= base;
+//   }
+//   return risultato;
+// }
+
+
+// console.log(potenzaCiclo(2, 3)); // 8
+
+
+
+// 39) Scrivi un validatore di email con queste regole:
+// -deve contenere una @
+// -deve contenere un punto posizionato dopo la @
+// -le parti di testo prima della @ e tra la @ e il punto devono almeno avere tre lettere
+// -il punto non può essere l'ultimo carattere
+// CORREZIONE DEL PROF
+
+// includes() controlla se una stringa contiene un certo testo
+
+// function constainAt(email) {
+//     if (email.includes('@')) {
+//         return true;
+//     } else{
+//         return false;
+//     }
+    
+// }
+// // la funzione sotto serve per controllare se c'è un punto dopo la @
+// // indexOf() restituisce la posizione del primo "." (o -1 se non c’è)
+// function containsDotAfterAt(email) {
+// const dotPosition = email.indexOf('.');
+// if (dotPosition === -1) {
+//     return false;
+    
+// }
+
+//     const atPosition = email.indexOf('@');
+//     if (dotPosition > atPosition) {
+//         return true;
+//     }else{
+//         return false;
+//     }
+
+
+    
+// }
+
+// function fristAndSecondPartlengthIsThreeOrMore(email) {
+//     const atPosition = email.indexOf('@');
+//     const firstPart = email.substring(0, atPosition);
+
+//     const dotPosition = email.indexOf('.');
+//     const secondPart = email.substring(atPosition + 1, dotPosition);
+
+//     if (firstPart.length >= 3 && secondPart.length >=3) {
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// // 🔹 Funzione principale che valida l'email
+// // "!" significa "non" → quindi se NON contiene "@"
+// function emailValidator(email) {
+//     if (!constainAt(email)) {
+//         return false;
+        
+//     }else if (!containsDotAfterAt(email)) {
+//         return false;
+//     }else if (!fristAndSecondPartlengthIsThreeOrMore(email)) {
+//         return false;
+
+//     }else{
+//         return true;
+//     }
+    
+// }
+
+// console.log(containsDotAfterAt("cicciobello@gmail.com"));
+// console.log(containsDotAfterAt("ciaobello"));
+// console.log(containsDotAfterAt(""));
+
+
+
+
+
+
+// function validaEmail(email) {
+//   if (!email.includes("@")) return false;
+
+//   const [partePrima, resto] = email.split("@");
+//   if (!resto || partePrima.length < 3) return false;
+
+//   const puntoPosizione = resto.indexOf(".");
+//   if (puntoPosizione < 3 || puntoPosizione === resto.length - 1) return false;
+
+//   return true;
+// }
+
+
+// console.log(validaEmail("abc@def.com"));  // true
+// console.log(validaEmail("a@b.com"));      // false
+// console.log(validaEmail("abc@de."));      // false
+
+
+
+
+// 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
+
+function farfallinoTranslator(str) {
+    
+    const vowels = 'aeiou';
+
+   let farfallinoStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+         const char = str[i];
+
+         if (vowels.includes(char.toLowerCase())) {
+            farfallinoStr = farfallinoStr + char + 'f' + char;
+
+         } else {
+            farfallinoStr = farfallinoStr + char;
+         }
+         
+    }
+ 
+    return farfallinoStr;
 }
 
+console.log(farfallinoTranslator('torta'));
+console.log(farfallinoTranslator('patatine fritte'));
 
-console.log(checkPassword('caccacaccacacca'));
-console.log(checkPassword('Leonardo!'));
