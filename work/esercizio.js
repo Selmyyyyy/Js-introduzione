@@ -1041,27 +1041,267 @@
 
 // 40) crea un converitore tra italiano e farfallino(https://it.wikipedia.org/wiki/Alfabeto_farfallino)
 
-function farfallinoTranslator(str) {
+// function farfallinoTranslator(str) {
     
-    const vowels = 'aeiou';
+//     const vowels = 'aeiou';
 
-   let farfallinoStr = '';
+//    let farfallinoStr = '';
 
-    for (let i = 0; i < str.length; i++) {
-         const char = str[i];
+//     for (let i = 0; i < str.length; i++) {
+//          const char = str[i];
 
-         if (vowels.includes(char.toLowerCase())) {
-            farfallinoStr = farfallinoStr + char + 'f' + char;
+//          if (vowels.includes(char.toLowerCase())) {
+//             farfallinoStr = farfallinoStr + char + 'f' + char;
 
-         } else {
-            farfallinoStr = farfallinoStr + char;
-         }
+//          } else {
+//             farfallinoStr = farfallinoStr + char;
+//          }
          
-    }
+//     }
  
-    return farfallinoStr;
+//     return farfallinoStr;
+// }
+
+
+
+//const pippo = [1, 2, 4, 56, 78, 11, -123, 3, -23, 2, 22, 4];
+
+//41) creare una funzione che dato un array di numeri li eleva tutti al quadrato
+
+// function squareArray(nbrArray) {
+
+//     const newArray = [];
+
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+//         const square = element * element;
+
+//         newArray.push(square);
+        
+//     }
+
+    
+//     // for (const nbr of nbrArray) {
+
+//     //     const square = nbr ** 2;
+
+//     //     newArray.push(square);
+
+//     // }
+
+//     return newArray;
+// }
+
+//console.log(squareArray(pippo)) //-> [1, 4, 16, 3136, ....]
+
+
+//42) creare una funzione che dato un array di numeri li eleva al quadrato solo i numeri dispari
+
+// function squareOddArray(nbrArray) {
+
+//         const newArray = [];
+
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+
+//         const element = nbrArray[i];
+
+//         if(element % 2 === 0){
+
+//             newArray.push(element);
+
+//         } else {
+
+//             const square = element * element;
+
+//             newArray.push(square);
+            
+//         }
+
+//     }
+
+//     return newArray;
+
+    
+// }
+
+// console.log(squareOddArray(pippo)) //-> [1, 2, 4, 56, 78, 121, 15129, 9, 529, 2, 22, 4]
+
+// 43) Trova il Minimo
+// Scrivi una funzione trovaMinimo(array) che restituisce il numero più piccolo in un array di numeri.
+
+// const numbers = [34, -2, 45, 0, 11, -9, 23];
+
+// let min = numbers[0];
+
+// for (let i = 0; i < array.length; i++) {
+//    const element = array[i];
+//    if (element < min) {
+//       min = element;
+//    }
+//    return min;
+// }
+
+// console.log(min);
+
+
+// 44) Inverti Array con un ciclo
+// Scrivi una funzione invertiArray(array) che restituisce un nuovo array con gli elementi in ordine inverso.
+
+function invertiArray(array) {
+
+   const newArray = [];
+
+   for (let i = array.length - 1; i >= 0; i--) {
+      const element = array[i];
+      newArray.push(element);
+   }
+   return newArray;
+   
 }
 
-console.log(farfallinoTranslator('torta'));
-console.log(farfallinoTranslator('patatine fritte'));
 
+// 45) Maiuscolo Tutte le Parole
+// Scrivi una funzione maiuscoloTutto(array) che restituisce un nuovo array con tutte le stringhe in maiuscolo.
+
+
+
+// 46) Somma Righe Matrice
+// Scrivi una funzione sommaRighe(matrice) che restituisce un array con la somma degli elementi di ogni riga.
+
+// const superArray = [
+//    [1, 2, 3],
+//    [4, 5, 6],
+//    [7, 8, 9]
+// ];
+
+// function sommaRighe(matrice) {
+//    const sumArray = [];
+
+//    for (let rowNumber = 0; rowNumber < matrice.length; rowNumber++) {
+//       let rowSum = 0;
+//       const row = matrice[rowNumber];
+
+//       for (let columnNumber = 0; columnNumber < row.length; columnNumber++) {
+//          const element = row[columnNumber];
+//          rowSum = rowSum + element;
+//       }
+
+//       sumArray.push(rowSum);
+//    }
+
+//    return sumArray;
+// }
+
+// console.log(sommaRighe(superArray));
+
+
+
+
+// 47) Conta Occorrenze
+// Scrivi una funzione contaOccorrenze(array, elemento) che conta quante volte un elemento appare in un array
+const stringArray = ['ciao', 'come', 'stai', 'ciao', 'bene', 'ciao'];
+const numberarray = [1, 2, 3, 4, 2, 5, 2, 6, 2];
+// function contaOccorrenza(array, elemento) {
+
+//    let counter = 0;
+
+//    for (let i = 0; i < array.length; i++) {
+
+//       const selected = array[i];
+
+//       if (selected === elemento) {
+//          counter++;
+//       }
+//    }
+//    return
+// }
+
+
+// console.log(contaOccorrenza(numberarray, 10000));
+// console.log(contaOccorrenza(numberarray,4));
+
+
+
+// 48) Filtra indice pari
+// Scrivi una funzione filtraIndicePari(array) che tiene tutti gli elementi in posizione dispari
+// funzione del prof
+// function invertiArray(array) {
+
+//    const newArray = [];
+
+//    for (let i = 0; i < array.length; i++) {
+     
+//       const element = array[i];
+
+//       newArray.unshift(element);
+      
+//    }
+//    return newArray;
+// }
+
+// console.log(invertiArray(stringArray));
+
+
+// function filtraIndicaPari(array) {
+
+//    const newArray = [];
+
+//    for (let i = 0; i < array.length; i++) {
+//       const element = array[i];
+      
+//    }
+//    return newArray;
+// }
+// console.log(filtraIndicaPari(stringArray));
+
+
+// 49) Somma pari 
+// Scrivi una funzione sommaPari(array) che somma tutti i numeri pari
+
+// function sommaPari(array) {
+//       let result = 0;
+
+//       for (let i = 0; i < array.length; i++) {
+//          const element = array[i];
+         
+//       }
+   
+// }
+
+
+// 50) trova lunghezze
+// Scrivi una funzione trovaLunghezzeParola(array) che restituisce un array delle lunghezze(numeri) delle stringhe che compongono l'array in input
+
+// function trovaLunghezzeParola(array) {
+//    const newArray = [];
+
+//    for (let i = 0; i < array.length; i++) {
+//       const element = array[i];
+//       const length = element.length;
+//       newArray.push(length);
+//    }
+//    return newArray;
+// }
+
+// const stringArray = ["pizza", "mondo", "ho molto sonno"];
+
+// console.log(trovaLunghezzeParola(stringArray));
+
+function countBy(x, n) {
+  let z = [];
+  
+for (let i = 0; i <= n; i++) {
+  z.push(x * i);
+ 
+   }
+
+
+  return z;
+}
+
+
+console.log(countBy(1,10));
