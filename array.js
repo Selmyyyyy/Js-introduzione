@@ -2,19 +2,19 @@
 
 ////ARRAY per definirew un array uso le parentesi [], l'array è una scatola 
 
-let numbers = [2,4,5,9];
+// let numbers = [2,4,5,9];
 
-// console.log( numbers.length);
+// // console.log( numbers.length);
 
-// console.log(numbers[0]); //Indica quale elemento dell’array vogliamo prendere.
+// // console.log(numbers[0]); //Indica quale elemento dell’array vogliamo prendere.
 
-let booleans = [true, true, true, false, true];
+// let booleans = [true, true, true, false, true];
 
-// console.log(booleans.length);
+// // console.log(booleans.length);
 
-// console.log(booleans[3]);
+// // console.log(booleans[3]);
 
-let strings = ['pippo', 'pluto', 'topolino', 'paperino'];
+// let strings = ['pippo', 'pluto', 'topolino', 'paperino'];
 
 // console.log(strings.length);
 
