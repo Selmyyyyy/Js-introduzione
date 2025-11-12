@@ -1309,9 +1309,9 @@
 
 //51) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // maggiori di 100
+
 const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8, 4];
-
-
+const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
 
 function numberGreatArray(nbrArray) {
 
@@ -1342,7 +1342,7 @@ console.log(numberGreatArray(numberArray));
 
 //52) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
 // che finiscono con 'a'
-const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
+
 
 // function StringA(str) {
 
@@ -1389,12 +1389,66 @@ console.log(stringArray.filter((str) => str[str.length - 1]==='a'))
 //53) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // divisibili per 3
 
+function number3(nbr) {
+  const result = [];
+
+ for (let i = 0; i < nbr.length; i++) {
+   if (nbr[i] % 3 === 0) {
+      result.push(nbr[i]);
+    }
+  }
+  return result;
+  
+ }
+
+  console.log(number3(numberArray));
+  
+function divisibiliPerTre(nbr) {
+  return nbr.filter(num => num % 3 === 0);
+}
+
+console.log(divisibiliPerTre(numberArray));
+
+
+
+
 // map
 //54) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // elevati al cubo
 
+
+
+function cubed2(nbr) {
+  const result = [];
+  for (let i = 0; i < nbr.length; i++) {
+    result.push(nbr[i] ** 2);
+  }
+  return result;
+}
+
+console.log(cubed2(numberArray));
+
+
+
+
 //55) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe
 // con la prima lettera maiuscola
+
+// function capitalizeWords(str) {
+//   // divido la stringa in parole
+//   const words = str.split(" ");
+
+//   // trasformo la prima lettera di ogni parola in maiuscolo
+//   const capitalizedWords = words.map(word => {
+//     return word.charAt(0).toUpperCase() + word.slice(1);
+//   });
+
+//   // ricompongo la stringa
+//   return capitalizedWords.join(" ");
+// }
+
+// console.log(capitalizeWords(stringArray));
+
 
 //56) Scrivi una funzione che, dato un array di numeri, crei un array di stringhe di
 //cancelletti lunga quanto il numero originale
@@ -1412,3 +1466,82 @@ console.log(stringArray.filter((str) => str[str.length - 1]==='a'))
 // volte ripetuta la lettera t;
 
 
+///////FOREACH non è particolarmente utile(viene usato tanto quindi riguardatelo)
+
+
+const students = ['luis', 'alexander', 'dtefania', 'eros', 'dantiel', 'selma'];
+const numbers =[30,12,5,111,300,400,1];
+
+// for (let i = 0; i <students.length; i++) {
+//   const student = students[i];
+
+//   console.log(student);
+  
+  
+// }
+
+// for (const student of students) {console.log(student);
+
+  
+// }
+
+// students.forEach((student, i) => console.log(i, student));
+
+/// find
+
+// function isGreaterThan100(nbr) {
+//   return nbr > 100;
+// }
+
+// console.log(isGreaterThan100(numbers));
+
+
+const prodotti = [
+  { id: 1, nome: "Mela", categoria: "Frutta", prezzo: 1.20, scadenza: "2025-11-15", peso: 0.2, biologico: true },
+  { id: 2, nome: "Pasta", categoria: "Pasta e Riso", prezzo: 0.80, scadenza: "2026-05-10", peso: 0.5, biologico: false },
+  { id: 3, nome: "Latte", categoria: "Latticini", prezzo: 1.10, scadenza: "2025-11-14", peso: 1, biologico: true },
+  { id: 4, nome: "Pane", categoria: "Pane e Sostituti", prezzo: 1.50, scadenza: "2025-11-12", peso: 0.3, biologico: false },
+  { id: 5, nome: "Yogurt", categoria: "Latticini", prezzo: 0.60, scadenza: "2025-11-20", peso: 0.125, biologico: true },
+  { id: 6, nome: "Riso", categoria: "Pasta e Riso", prezzo: 1.30, scadenza: "2027-02-20", peso: 1, biologico: false },
+  { id: 7, nome: "Pomodoro", categoria: "Ortaggi", prezzo: 0.90, scadenza: "2025-11-18", peso: 0.3, biologico: true },
+  { id: 8, nome: "Acqua", categoria: "Bevande", prezzo: 0.30, scadenza: "2026-12-31", peso: 1.5, biologico: false },
+  { id: 9, nome: "Biscotti", categoria: "Dolci", prezzo: 2.00, scadenza: "2026-03-01", peso: 0.2, biologico: false },
+  { id: 10, nome: "Uova", categoria: "Uova", prezzo: 2.50, scadenza: "2025-11-30", peso: 0.6, biologico: true },
+  { id: 11, nome: "Caffè", categoria: "Bevande", prezzo: 3.00, scadenza: "2026-10-01", peso: 0.25, biologico: false },
+  { id: 12, nome: "Formaggio", categoria: "Latticini", prezzo: 4.50, scadenza: "2025-12-10", peso: 0.2, biologico: true },
+  { id: 13, nome: "Carote", categoria: "Ortaggi", prezzo: 0.70, scadenza: "2025-11-25", peso: 1, biologico: true },
+  { id: 14, nome: "Tonno", categoria: "Conserve", prezzo: 1.80, scadenza: "2027-01-15", peso: 0.16, biologico: false },
+  { id: 15, nome: "Cioccolato", categoria: "Dolci", prezzo: 1.70, scadenza: "2026-04-30", peso: 0.1, biologico: false }
+];
+
+
+//61) mettere in ordine l'array di prodotti per prezzo dal più costoso in giù
+
+function compareProdottoByPrezzoDescending(prodotto1, prodotto2) {
+    return prodotto2.prezzo - prodotto1.prezzo;
+}
+
+function compareCarsByModelAscending(prodotto1, prodotto2) {
+    return prodotto1.nome.localeCompare(prodotto2.nome);
+}
+
+function compareProdottiByPrezzoDescendingAndModelAscending(prodotto1, prodotto2) {
+    if(prodotto1.prezzo > prodotto2.prezzo){
+        return -1;
+    } else if (prodotto2.prezzo > prodotto1.prezzo){
+        return 1;
+    } else {
+        return prodotto1.nome.localeCompare(prodotto2.nome);
+    }
+}
+
+cars.sort(compareProdottiByPrezzoDescendingAndModelAscending);
+
+console.log(prodotti);
+
+
+
+//62) mettere in ordine per nome discendente
+//63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
+//64) mettere in ordine per anno di scadenza dal più vicino
+//65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
