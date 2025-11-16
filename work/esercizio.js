@@ -1469,8 +1469,8 @@ console.log(cubed2(numberArray));
 ///////FOREACH non è particolarmente utile(viene usato tanto quindi riguardatelo)
 
 
-const students = ['luis', 'alexander', 'dtefania', 'eros', 'dantiel', 'selma'];
-const numbers =[30,12,5,111,300,400,1];
+// const students = ['luis', 'alexander', 'dtefania', 'eros', 'dantiel', 'selma'];
+// const numbers =[30,12,5,111,300,400,1];
 
 // for (let i = 0; i <students.length; i++) {
 //   const student = students[i];
@@ -1517,31 +1517,97 @@ const prodotti = [
 
 //61) mettere in ordine l'array di prodotti per prezzo dal più costoso in giù
 
-function compareProdottoByPrezzoDescending(prodotto1, prodotto2) {
-    return prodotto2.prezzo - prodotto1.prezzo;
-}
+// function comparePrezzoAscending(n1, n2){
+//     return n2.prezzo - n1.prezzo; 
+// }
 
-function compareCarsByModelAscending(prodotto1, prodotto2) {
-    return prodotto1.nome.localeCompare(prodotto2.nome);
-}
-
-function compareProdottiByPrezzoDescendingAndModelAscending(prodotto1, prodotto2) {
-    if(prodotto1.prezzo > prodotto2.prezzo){
-        return -1;
-    } else if (prodotto2.prezzo > prodotto1.prezzo){
-        return 1;
-    } else {
-        return prodotto1.nome.localeCompare(prodotto2.nome);
-    }
-}
-
-cars.sort(compareProdottiByPrezzoDescendingAndModelAscending);
-
-console.log(prodotti);
-
+// prodotti.sort(comparePrezzoAscending);
+// console.log(prodotti);
 
 
 //62) mettere in ordine per nome discendente
+
+// function compareStringsDescending(s1, s2) {
+//     return s1.nome.localeCompare(s2.nome);
+// }
+
+// prodotti.sort(compareStringsDescending);
+// console.log(prodotti);
+
+
 //63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
+
+// function compareCategorieAscending(s1, s2) {
+//     if(s1,s2){
+//         return s1.categoria.localeCompare(s2.categoria);
+//     } else if (s1.peso > s2.peso){
+//         return 1;
+//     } else {
+//         return s1.peso - s2.peso;
+//     }
+// }
+// prodotti.sort(compareCategorieAscending);
+// console.log(prodotti);
+
+
+// function compareCategoriePeso(s1, s2) {
+//     
+//     const categoriaComparison = s1.categoria.localeCompare(s2.categoria);
+
+//     // Se le categorie sono diverse, restituisci immediatamente l'ordinamento alfabetico.
+//     if (categoriaComparison !== 0) {
+//         return categoriaComparison;
+//     }
+
+//     // 2. Criterio Secondario: Peso (Decrescente, dal più pesante)
+//     // Se le categorie sono uguali (categoriaComparison è 0), ordina per peso.
+//     // Per l'ordine Decrescente si usa n2 - n1.
+//     return s2.peso - s1.peso;
+// }
+
+// prodotti.sort(compareCategoriePeso);
+// console.log(prodotti);
+
+
 //64) mettere in ordine per anno di scadenza dal più vicino
+
+//  function compareStringsAscending(s1, s2) {
+//     return s1.scadenza.localeCompare(s2.scadenza);
+// }
+
+// prodotti.sort(compareStringsAscending);
+// console.log(prodotti);
+
+// function compareScadenzaAscending(s1, s2) {
+//     // Usiamo localeCompare() per confrontare le stringhe di data nel formato AAAA-MM-GG.
+//     // Il confronto stringa è sufficiente e restituisce:
+//     // - Un valore negativo se s1 è una data più vicina (deve venire prima).
+//     // - Un valore positivo se s2 è una data più vicina (deve venire prima).
+//     // - Zero se le date sono uguali.
+//     return s1.scadenza.localeCompare(s2.scadenza);
+// }
+
+// prodotti.sort(compareScadenzaAscending);
+// console.log(prodotti);
+
+
 //65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
+
+// function compareCategoriePesoNome(s1,s2) {
+
+//   const categoriaComparison = s2.categoria.localeCompare(s1.categoria);
+
+//     if (categoriaComparison !== 0) {
+//         return categoriaComparison;
+//     }
+//     const pesoComparison = s1.peso - s2.peso;
+
+//     if (pesoComparison !== 0) {
+//       return pesoComparison;
+//     }
+//     return  s1.nome.localeCompare(s2.nome);
+
+// }
+
+// prodotti.sort(compareCategoriePesoNome);
+// console.log(prodotti);
