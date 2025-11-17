@@ -1521,8 +1521,18 @@ const prodotti = [
 //     return n2.prezzo - n1.prezzo; 
 // }
 
-// prodotti.sort(comparePrezzoAscending);
-// console.log(prodotti);
+
+function comparaPrezzoAscending(prodotto1, prodotto2) {
+  const prezzo1 =  prodotto1.prezzo;
+const prezzo2 = prodotto2.prezzo;
+return prezzo2 - prezzo1;
+
+}
+
+prodotti.sort(comparaPrezzoAscending);
+console.log(prodotti);
+
+
 
 
 //62) mettere in ordine per nome discendente
@@ -1531,45 +1541,68 @@ const prodotti = [
 //     return s1.nome.localeCompare(s2.nome);
 // }
 
-// prodotti.sort(compareStringsDescending);
-// console.log(prodotti);
 
+
+function compareStrings2Desceding(prodotto1,prodotto2) {
+  const nome1 = prodotto1.nome;
+  const nome2 = prodotto2.nome;
+  return prezzo1 - prezzo2;
+  
+}
+prodotti.sort(compareStrings2Descending);
+console.log(prodotti);
 
 //63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
 
-// function compareCategorieAscending(s1, s2) {
-//     if(s1,s2){
-//         return s1.categoria.localeCompare(s2.categoria);
-//     } else if (s1.peso > s2.peso){
-//         return 1;
-//     } else {
-//         return s1.peso - s2.peso;
-//     }
-// }
-// prodotti.sort(compareCategorieAscending);
-// console.log(prodotti);
 
 
 // function compareCategoriePeso(s1, s2) {
 //     
 //     const categoriaComparison = s1.categoria.localeCompare(s2.categoria);
 
-//     // Se le categorie sono diverse, restituisci immediatamente l'ordinamento alfabetico.
-//     if (categoriaComparison !== 0) {
+//        if (categoriaComparison !== 0) {
 //         return categoriaComparison;
 //     }
 
-//     // 2. Criterio Secondario: Peso (Decrescente, dal più pesante)
-//     // Se le categorie sono uguali (categoriaComparison è 0), ordina per peso.
-//     // Per l'ordine Decrescente si usa n2 - n1.
+//    
 //     return s2.peso - s1.peso;
 // }
 
-// prodotti.sort(compareCategoriePeso);
-// console.log(prodotti);
+
+
+// function compareCategoryAndWeightDesc(prodotto1, prodotto2) {
+//   return prodotto1.categoria.localeCompare(prodotto2);
+// }
+
+function compareCategoryAndWeightDesc(prodotto1, prodotto2) {
+  if (prodotto1.categoria === prodotto2.categoria) {
+    return prodotto2.peso - prodotto1.peso;
+  }
+  return prodotto1.categoria.localeCompare(prodotto2.categoria);
+}
+
+prodotti.sort(compareCategoryAndWeightDesc);
+console.log(prodotti);
 
 
 //64) mettere in ordine per anno di scadenza dal più vicino
+
+function compareYearsDesc(prodotto1, prodotto2) {
+  const yearString1 = prodotto1.scadenza.silce(0,4);
+    const yearString2 = prodotto.scadenza.silce(0,4);
+
+    const year1 = Number(yearString1);
+    const year2 = Number(yearString2);
+
+    return year1 - year2;
+
+  
+  
+}
+
+prodotti.sort(compareYearsDesc);
+console.log(prodotti);
+
 
 //  function compareStringsAscending(s1, s2) {
 //     return s1.scadenza.localeCompare(s2.scadenza);
@@ -1592,6 +1625,32 @@ const prodotti = [
 
 
 //65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
+
+function compCatDescWeightAscNameAsc(prodotto1,prodotto2){
+ 
+  if (prodotto1.categoria === prodotto2.categoria) {
+    
+    if (prodotto1.peso === prodotto2.peso) {
+
+      return prodotto1.nome.localeCompare(prodotto2.nome);
+      
+    }
+    return prodotto1.peso - prodotto2.peso;
+  }
+
+
+  return prodotto2.categoria.localeCompare(prodotto1.categoria);
+  
+}
+
+prodotti.sort(compCatDescWeightAscNameAsc);
+console.log(prodotti);
+
+
+
+
+
+
 
 // function compareCategoriePesoNome(s1,s2) {
 

@@ -422,3 +422,37 @@
 // cars.sort(compareCarsBySpeedDescendingAndModelAscending);
 
 // console.log(cars);
+
+// SORTING NOT IN PLACE
+
+// const numbers = [ 200, 2, -20, 12, 5, 1000 ];
+
+// const doubleNumbers = numbers.map((n) => n * 2);
+
+// console.log(doubleNumbers);
+// console.log(numbers);
+
+// const sortedNumbers = numbers.sort((n1,n2) => n1 - n2);
+//sort Serve per ordinare gli elementi dell’array.
+// => dice a sort come confrontare i numeri.
+// console.log(sortedNumbers);
+
+// function correctSort(array) {
+    
+//     // const clone = [...array];
+
+//     // const clone = new Array(...array);
+//     const clone = Array.from(array);
+
+//     clone.sort(compareFn);
+
+//     return clone;
+    
+// }
+
+// const sortedNumbers = correctSortsort(numbers, (n1,n2) => n1 - n2);
+
+// console.log(sortedNumbers);
+// console.log(numbers);
+
+
